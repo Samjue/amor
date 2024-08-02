@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212; /* Fondo negro suave */
+    overflow: hidden;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    animation: colorChange 3s infinite;
+}
+
+h2 {
+    font-family: 'Great Vibes', cursive; /* Tipo de letra bonito */
+    animation: colorChange 2s infinite;
+}
+
+p {
+    animation: colorChange 3s infinite;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.snowflakes, .hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake, .heart {
+    position: absolute;
+    top: -10%;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.snowflake {
+    color: #fff;
+    font-size: 2em;
+    animation: fall 10s linear infinite;
+}
+
+.heart {
+    color: #ff69b4;
+    font-size: 2em;
+    animation: fall 8s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 5s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(3) {
+    left: 30%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(4) {
+    left: 40%;
+    animation-duration: 5s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(5) {
+    left: 50%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+.snowflake:nth-child(6) {
+    left: 60%;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+
+.snowflake:nth-child(7) {
+    left: 70%;
+    animation-duration: 5s;
+    animation-delay: 6s;
+}
+
+.snowflake:nth-child(8) {
+    left: 80%;
+    animation-duration: 6s;
+    animation-delay: 7s;
+}
+
+.snowflake:nth-child(9) {
+    left: 90%;
+    animation-duration: 7s;
+    animation-delay: 8s;
+}
+
+.snowflake:nth-child(10) {
+    left: 95%;
+    animation-duration: 8s;
+    animation-delay: 9s;
+}
+
+.heart:nth-child(1) {
+    left: 15%;
+    animation-duration: 6s;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 25%;
+    animation-duration: 7s;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(3) {
+    left: 35%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(4) {
+    left: 45%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+
+.heart:nth-child(5) {
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+@keyframes colorChange {
+    0% { color: #ff69b4; }
+    25% { color: #ff1493; }
+    50% { color: #ff4500; }
+    75% { color: #ff8c00; }
+    100% { color: #ff69b4; }
+}
+
+.animated-letter-h2 {
+    display: inline-block;
+    opacity: 0;
+    animation: colorChangeLetters 1s forwards;
+}
+
+@keyframes colorChangeLetters {
+    0% {
+        color: #ff69b4;
+        opacity: 0;
+    }
+    100% {
+        color: #333;
+        opacity: 1;
+    }
+}
